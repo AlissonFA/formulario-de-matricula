@@ -15,6 +15,19 @@ main {
     max-width: 33rem; /* para impedir que o texto se estique ao diminuir o zoom */
     margin-left: auto;
   }
+
+  /* Ajustando botão de voltar */
+  & .back {
+    display: flex;
+    align-items: center; /* Alinhamento eixo Y */
+    gap: .5rem; /* Significa 0.5 */
+    margin-bottom: 1.5rem;
+  }
+
+  & h1 {
+    font: 600 1.5rem/1.25 var(--font-family-poppins);
+    margin-bottom: .5rem;
+  }
 }
 
 aside {
@@ -23,5 +36,19 @@ aside {
 
   & .aside-container {
     max-width: 31rem;
+
+    /* primeiro nível de imagem (porque tem duas imagens) */
+    & > img {
+      margin-top: 2rem;
+    }
+  }
+
+  & h2 {
+    font: 600 2.5rem/1.25 var(--font-family-poppins);
+    margin-bottom: .5rem;
+
+    & span {
+      color: var(--text-highlight);
+    }
   }
 }
