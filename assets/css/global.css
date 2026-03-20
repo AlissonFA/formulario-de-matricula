@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+/* Cores */
+
+  /* Brand */
+  --brand-light: #F67841;
+  --brand-mid: #F3541C;
+  --brand-dark: #E43A12;
+
+  /* Text */
+  --text-primary: #292524;
+  --text-secondary: #57534E;
+  --text-tertiary: #8F8881;
+  --text-highlight: #E43A12;
+
+  /* Surface */
+  --surface-primary: #FFFFFF;
+  --surface-secondary: #FEE7D6;
+  --surface-disabled: #E7E5E4;
+
+  /* Stroke */
+  --stroke-default: #D6D3D1;
+  --stroke-highlight: #F3541C;
+
+  /* Semantic */
+  --semantic-error: #DC2626;
+
+  /* Supporting */
+  --orange: #F9A474;
+  --yellow: #FEDF6F;
+  --green: #C7D78D;
+  --blue: #B8CEDC;
+  --violet: #C3B2E7;
+  --pink: #F682A5;
+
+/* Fontes */
+  --font-family-poppins: "Poppins", sans-serif;
+  --text: 400 1rem/1.5 var(--font-family-poppins);
+  --text-sm: 400 0.875rem/1.4 var(--font-family-poppins);
+  --h1: 700 32px/120% var(--font-family-poppins);
+  --h2: 700 24px/120% var(--font-family-poppins);
+  --h3: 700 20px/120% var(--font-family-poppins);
+  --h4: 700 16px/120% var(--font-family-poppins);
+}
