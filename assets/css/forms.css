@@ -15,3 +15,8 @@ form {
   margin-bottom: 1.5rem; /* espaço abaixo de "Informações da criança" */
   }
 }
+
+/* fieldset anterior a ele, outro fieldset */
+fieldset + fieldset {
+  margin-top: 3rem; /* separando a parte de "Endereço residencial" */
+}

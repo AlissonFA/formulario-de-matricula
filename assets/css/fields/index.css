@@ -62,3 +62,23 @@ input[type="date"] {
 select {
   background: url(../../icons/arrow-down-01.svg) no-repeat calc(100% - 1rem); /* setinha; o calc é só para não ficar chutando valores de espaçamento para igualar com o icone de data */
 }
+
+.address .flex {
+  gap: 1.25rem; /* espaçamento no campo de endereço; entre rua e número; cidade e estado */
+}
+
+/* isso aqui seria os campos que estão disabled: rua, cidade, Estado */
+.input-wrapper:has([disabled]) {
+  opacity: .5;
+}
+
+/* isso aqui é o input que tenha atributo disabled */
+input {
+  &[disabled] {
+    background-color: var(--surface-disabled);
+    
+    border: 1px solid var(--stroke-default);
+
+    color: var(--text-primary);
+  }
+}
