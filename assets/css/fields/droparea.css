@@ -1,0 +1,43 @@
+.dropzone {
+  border: 1px dashed var(--stroke-default); /* borda tracejada; quando for 1px não precisa por em rem */
+  border-radius: .25rem; /* arredondamento de borda */
+
+  display: grid;
+  justify-items: center; /* centraliza todo mundo no centro */
+  gap: .5rem; /* entre o icone e o texto */
+
+  text-align: center; /* texto alinhado ao centro */
+  padding: 1.75rem 1rem; /* Cima e Baixo | Laterais */
+
+  /* para fazer o campo padrão de escolher arquivo desaparecer */
+
+  position: relative;
+  & input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0; /* alinha ao topo e ao lado esquerdo */
+    opacity: 0;
+  }
+
+  & p {
+    color: #a8a29e;
+  }
+
+  &:hover, &:has(input:focus) {
+    /* esse has verifica se o input está em foco, se estiver em foco ele aplica tudo isso. (Para que o tab vá descendo e selecionando, sem o has ele não estava selecionando */
+    border-width: 2px;
+    border-color: var(--stroke-highlight);
+    background-color: var(--surface-secondary);
+
+    & p {
+      color: var(--text-tertiary);
+    }
+
+    /* ao invés de substituir a imagem para trocar a cor do icone de cloud, vou utilizar o svg */
+
+    & svg path {
+      stroke: var(--stroke-highlight); /* o icone de nuvem é todo feito com linhas, por isso estamos mudando o stroke */
+    }
+  }
+}

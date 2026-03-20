@@ -1,3 +1,5 @@
+@import url(./droparea.css);
+
 /* Padrões de campo */
 input, textarea, select {
   appearance: none; /* para não mostrar nada de aparência que ele venha trazer; do select ele tirou a setinha */
@@ -21,7 +23,8 @@ label {
 
 input:focus,
 select:focus,
-textarea:focus {
+textarea:focus,
+input[type="date"]:focus-within {
   outline: .25rem solid var(--surface-secondary); /* quando os campos estão selecionados ele aplica essa cor ao redo */
   border: .125rem solid var(--stroke-highlight); /* borda quando está selecionado */
   outline-offset: .1px; /* para aparecer a borda no navegador safari */
@@ -57,5 +60,5 @@ input[type="date"] {
 }
 
 select {
-  background: url(../../icons/arrow-down-01.svg) no-repeat calc(100% - 1rem);
+  background: url(../../icons/arrow-down-01.svg) no-repeat calc(100% - 1rem); /* setinha; o calc é só para não ficar chutando valores de espaçamento para igualar com o icone de data */
 }
