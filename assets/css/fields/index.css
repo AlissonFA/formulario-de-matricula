@@ -26,3 +26,36 @@ textarea:focus {
   border: .125rem solid var(--stroke-highlight); /* borda quando está selecionado */
   outline-offset: .1px; /* para aparecer a borda no navegador safari */
 }
+
+input[type="date"] {
+  /* todo input que tiver o tipo date vai receber tudo que colocarmos aqui */
+  position: relative; /* isso em conjunto com o position absolute fez o icone andar */
+  &::-webkit-calendar-picker-indicator {
+    /* isso aqui não funciona no safari:
+    position: absolute;
+    background: url(../../icons/calendar-03.svg) center/contain;
+    right: 1rem; */
+
+    /* display: none; isso remove o icone da data para ficar igual ao safari; mas não será utilizado para não perder o icone do calendário ao lado */
+
+    opacity: 0; /* o icone continua funcional, só está escondido */
+  }
+
+  &:before {
+    content: ""; /* todo before precisa ter um content porque estamos criando um elemento HTML para colocar aqui */
+    position: absolute;
+    background: url(../../icons/calendar-03.svg) center/contain;
+    right: 1rem;
+    width: 1.25rem;
+    height: 1.25rem;
+
+    /* estrategia para alinhar coisas ao meio quando estão absolutas */
+
+    top: 50%; /* imagine uma linha passando no meio do campo de input, isso aqui estaria colocando o icone abaixo da linha */
+    transform: translateY(-50%); /* isso aqui estaria pegando o 50% do tamanho do icone e alinhando no meio da linha */
+  }
+}
+
+select {
+  background: url(../../icons/arrow-down-01.svg) no-repeat calc(100% - 1rem);
+}
