@@ -1,0 +1,28 @@
+/* Padrões de campo */
+input, textarea, select {
+  appearance: none; /* para não mostrar nada de aparência que ele venha trazer; do select ele tirou a setinha */
+  width: 100%; /* já ficam esticados perfeitamente */
+  border-radius: .5rem; /* arredondamento de borda dos inputs */
+  border: 1px solid var(--stroke-default); /* isso aqui está trocando a borda de cada input */
+
+  padding: .75rem 1rem; /* Cima, Baixo | Laterais */
+  
+  font: var(--text);
+}
+
+label {
+  /* Campos acima, tipo: Nome completo; Data de nascimento */
+  font: var(--text-sm); /* é a fonte dos campos acima */
+  color: var(--text-secondary); /* cor dos campos acima */
+
+  display: block; /* block porque por padrão o label é inline, e inline não aceita margin-bottom */
+  margin-bottom: 1.25rem; /* espaçamento dos campos acima; para baixo */
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: .25rem solid var(--surface-secondary); /* quando os campos estão selecionados ele aplica essa cor ao redo */
+  border: .125rem solid var(--stroke-highlight); /* borda quando está selecionado */
+  outline-offset: .1px; /* para aparecer a borda no navegador safari */
+}

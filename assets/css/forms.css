@@ -1,0 +1,17 @@
+@import url(./fields/index.css);
+
+form {
+  margin-top: 3rem; /* espaço acima do formulário */
+
+  & fieldset {
+    border: none; /* tira a bordinha do fieldset */
+  
+    display: grid;
+    gap: 1.5rem; /* espaçamento entre cada um dos elementos */
+  }
+
+  & legend {
+  font: 600 1rem/1.25 var(--font-family-poppins); /* fonte do "Informações da criança" */
+  margin-bottom: 1.5rem; /* espaço abaixo de "Informações da criança" */
+  }
+}
