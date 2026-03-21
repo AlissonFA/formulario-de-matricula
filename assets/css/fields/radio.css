@@ -1,0 +1,59 @@
+label + .radio-wrapper {
+  margin-top: 1rem;
+}
+
+.radio-wrapper {
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr); crie 3 colunas, cada uma delas por igual */
+  grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr)); /* encaixe automático, não importa quantas colunas */
+  gap: 1rem;
+}
+
+.radio-inner {
+  border: 1px solid var(--stroke-default);
+  border-radius: .5rem;
+
+  display: grid;
+  justify-items: center;
+  gap: .5rem;
+  padding: 2rem .5rem .5rem; /* Cima | Laterais | Baixo */
+
+  position: relative;
+  & input,
+  & input:focus,
+  & input:hover {
+    all: unset; /* tira todas as informações do input */
+    position: absolute;
+    inset: 0;
+  }
+
+  /* bolinha */
+  .radio-image {
+    background-image: url(../../icons/radio-default.svg);
+
+    width: 1.5rem;
+    height: 1.5rem;
+
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+  }
+
+  /* para quando passar o mouse em cima */
+  &:hover, &:focus-within {
+    border: 1px solid var(--stroke-highlight);
+
+    & .radio-image {
+      background-image: url(../../icons/radio-hover.svg);
+    }
+  }
+
+  /* para marcar a bolinha quando cliacar */
+  &:has(:checked) {
+    border: 2px solid var(--stroke-highlight);
+
+    & .radio-image {
+      background-image: url(../../icons/radio-checked.svg);
+    }
+  }
+}
