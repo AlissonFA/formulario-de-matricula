@@ -1,5 +1,6 @@
 .dropzone {
-  border: 1px dashed var(--stroke-default); /* borda tracejada; quando for 1px não precisa por em rem */
+  border: 2px dashed transparent; /* para não aumentar de tamanho ao passar o mouse por cima ou clicar */
+  outline: 1px dashed var(--stroke-default); /* borda tracejada; quando for 1px não precisa por em rem */
   border-radius: .25rem; /* arredondamento de borda */
 
   display: grid;
@@ -26,7 +27,7 @@
 
   &:hover, &:has(input:focus) {
     /* esse has verifica se o input está em foco, se estiver em foco ele aplica tudo isso. (Para que o tab vá descendo e selecionando, sem o has ele não estava selecionando */
-    border-width: 2px;
+    outline-width: 0;
     border-color: var(--stroke-highlight);
     background-color: var(--surface-secondary);
 
