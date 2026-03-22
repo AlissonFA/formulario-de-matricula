@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <img src="./assets/images/Preview.png" width="100%" alt="Preview do projeto Estrelas do Amanhã">
+  <img src="./assets/images/preview.png" width="100%" alt="Preview do projeto Estrelas do Amanhã">
 </p>
 
 ---
