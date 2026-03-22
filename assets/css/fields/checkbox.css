@@ -1,0 +1,39 @@
+.terms-wrapper {
+  margin-top: 3rem; /* espaço entre os esportes */
+  display: flex;
+  gap: .75rem;
+  align-items: flex-start;
+
+  & strong {
+    font-weight: 500;
+    color: var(--text-highlight);
+  }
+}
+
+.checkbox-wrapper {
+  position: relative;
+
+  /* motivo de quando passa o mouse em qualquer lugar dele, seja texto ou caixa, ele mostre o hover */
+  & [type="checkbox"] {
+    all: unset;
+    position: absolute;
+    inset: 0;
+  }
+
+  .checkbox-image {
+    flex: 0 0 1.5rem; /* tira stretch | grow | shrink */
+    height: 1.5rem;
+
+    background-image: url(../../icons/checkbox-default.svg);
+  }
+
+  &:hover, &:focus-within {
+    .checkbox-image {
+      background-image: url(../../icons/checkbox-hover.svg);
+    }
+  }
+
+  &:has(:checked) .checkbox-image {
+    background-image: url(../../icons/checkbox-checked.svg);
+  }
+}
